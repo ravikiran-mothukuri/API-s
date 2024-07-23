@@ -1,0 +1,60 @@
+###
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/books/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhdmlraXJhbl9tb3RodWt1cmkiLCJpYXQiOjE3MjE3NTMyNDN9.J5siHfXphGUe3kYrutX-HbHxatGStPGeqdzpkbozJOw
+
+###
+GET http://localhost:3000/books/?offset=2&limit=3
+
+###
+GET http://localhost:3000/books/7/
+
+###
+GET http://localhost:3000/getAuthorBooks/Mercer Mayer
+
+###
+POST  http://localhost:3000/books/
+Content-Type: application/json
+
+{
+  "title": "M.Hinachan",
+  "author": "Hinachan Mothukuri",
+  "language": "The AI",
+  "id": 456736 
+}
+
+### 
+PUT http://localhost:3000/updateBook/45673/
+Content-Type: application/json
+
+{
+  "title": "M.Hinachan",
+  "author": "Hinachan Mothukuri",
+  "language": "The New Gen",
+  "id": 45673
+}
+
+###
+DELETE http://localhost:3000/delete/23
+
+###
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{
+  "username": "ravikiran_mothukuri",
+  "name": "M.Ravikiran",
+  "password": "shinchan@123",
+  "email": "shinchan@gmail.com"
+}
+
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "ravikiran_mothukuri",
+  "password": "shinchan@123"
+}
